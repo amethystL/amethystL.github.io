@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GRID</title>
+    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+">
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/beautifulButtons.css">
+    <link rel="stylesheet" href="/css/SectionSeparators/css/normalize.css">
+    <link rel="stylesheet" href="/css/SectionSeparators/css/demo.css">
+    <link rel="stylesheet" href="/css/SectionSeparators/css/icons.css">
+    <link rel="stylesheet" href="/css/SectionSeparators/css/component.css">
+    <link rel="stylesheet" href="/css/GammaGallery/css/style.css">
+    <link rel="stylesheet" href="/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/material-photo-gallery.css">
+    <link rel="stylesheet" href="/css/buttons_FILES/css/buttons.css">
+    <link rel="stylesheet" href="/css/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/unsemantic-master/assets/stylesheets/unsemantic-grid-base.css">
+    <link rel="stylesheet" href="/css/unsemantic-master/assets/stylesheets/unsemantic-grid-desktop.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="canonical" href="http://yourdomain.com/grid/">
+    <!-- scripts -->
+    <!--<script src="../js/jquery-1.12.0.min.js"></script>-->
+    <script src="../js/jquery/external/jquery/jquery.js"></script>
+    <script src="../js/jquery/jquery-ui.min.js"></script>
+    <script src="../css/GammaGallery/js/modernizr.custom.70736.js"></script>
+    <script src="../js/sly.min.js"></script>
+    <!--<script src="../js/masonry.pkgd.min.js"></script>-->
+    <script src="../js/snap.svg-min.js"></script>
+    <script src="../js/wow.min.js"></script>
+</head>
+
+    
+  <body>
+      
+      <div id="mainContainer">
+        <video autoplay loop id="bgvid">
+            <source src="../images/video.mp4" type="video/mp4">
+        </video>
+      <div id="container_1" class="grid-container">
+          
+        <div id="headerLogo" class="grid-80">
+            <img id="logo" src="../images/logo2.png" alt="logo" href="#">
+        </div>
+          
+          
+        <div id="shareIcons" class="grid-20">
+            
+            <div id="closed">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-compress fa-stack-2x"></i>
+                <i class="fa fa-expand fa-stack-2x"></i>
+            </span>
+            </div>
+            
+            <div id="revealedIcons">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
+            </span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-google-plus fa-stack-1x"></i>
+            </span>
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x"></i>
+            </span>
+            </div>
+         
+        </div>
+          
+      
+      </div>          
+      <div id="container_2" class="grid-container">
+    <div id="main" class="grid-100" style="text-align: left;">
+        <div id="content">
+        <h1>Hello!</h1>
+        <p>They scream and they cry much as you're doing now.
+            Search him. Then I will kill you.
+            Bruce... it's okay. Don't be afraid.
+            I'll be standing where l belong. Between you and the peopIe of Gotham.
+            If you can tell me the Russian for "apply your own bloody suntan lotion."
+            You care about justice? Look beyond your own pain, Bruce. This city is rotting.
+            I give a damn because a good man once made me responsible for what was most precious to him in the whole world.
+            You have inspired good. But you spat in the faces of Gotham's criminals. Didn't you think there might be casualties? Things always get worse             before they get better.
+            Peace has cost you your strength. Victory has defeated you.
+            It's simple. We, uh, kill the Batman.
+            That's a lovely lovely voice!
+            I hope you're not a member of the fire brigade.
+            Someone like you. Someone who'll rattle the cages.
+            It doesn't matter who we are. What matters is our plan.
+        </p>
+        <p>
+        Let me get this straight. You think that your client, one of the wealthiest, most powerful men in the world is secretly a vigilante who spends           his nights beating criminals to a pulp with his bare hands and your plan is to blackmail this person? Good luck.
+        Justice is about harmony. Revenge is about you making yourself feel better.
+        I think you and your friend have found the last game in town. where it hurts, their wallets. It's bold. You gonna count me in?
+        </p>
+        <p>
+        Carbon fiber, .28 caliber, made in China. If you wanna kill a public servant, Mr Maroni... I recommend you buy American.
+        </p>
+        </div>
+    </div>
+</div>
+
+
+    <footer>
+
+<div id="container_3" class="grid-container">
+    
+    <div id="secondColumn" class="grid-100">
+        <div id="navigator">
+        <svg id="navSvg" width="543" height="41" style="display: block; margin: auto;">
+        </svg>
+        <div id="navLabelGroup">
+        <i class="fa fa-caret-up" style=";vertical-align: top; font-size: 13px; color: #95F22E;"></i>
+        <span id="navLabel">Home</span>
+        </div>
+        </div>
+    </div>
+    
+</div>
+
+</footer>
+
+<script>
+    
+    new WOW().init();
+    
+    var s = Snap("#navSvg");
+    s.attr({
+        fill: "none",
+        stroke: "#fff",
+        strokeWidth: 1
+    });
+    
+    var diffX = 18;
+    var x = 1;
+    var y = 40;
+    
+    
+    //drawing the bigger line
+    h = 1
+    s.path(Snap.format("M{x} {y} V{dim.height}", {
+    x: x,
+    y: y,
+    dim: {
+        height: h,
+    }
+    })).attr({
+        stroke: "#95F22E",
+    });
+
+    //drawing the complete scale from here
+    
+    for(var j=0; j<3; j++){
+
+    // drawing four small lines
+    for(var i=0; i<6; i++){
+        x = x + diffX
+        h = 30
+        s.path(Snap.format("M{x} {y} V{dim.height}", {
+        x: x,
+        y: y,
+        dim: {
+            height: h,
+        }
+        }));
+    }
+
+    /* drawing the middle line
+    x = x + diffX
+    h = 30
+    s.path(Snap.format("M{x} {y} V{dim.height}", {
+    x: x,
+    y: y,
+    dim: {
+        height: h,
+    }
+    }));
+    */
+    /*
+    // drawing four small lines
+    for(var i=0; i<4; i++){
+        x = x + diffX
+        h = 30
+        s.path(Snap.format("M{x} {y} V{dim.height}", {
+        x: x,
+        y: y,
+        dim: {
+            height: h,
+        }
+        }));
+    }
+    */
+    //drawing the bigger line
+    x = x + diffX
+    h = 10
+    s.path(Snap.format("M{x} {y} V{dim.height}", {
+    x: x,
+    y: y,
+    dim: {
+        height: h,
+    }
+    }));
+        
+    }
+    
+    
+    
+    
+</script>
+
+      </div>
+      
+      <!-- scripts -->
+      <script src="../css/GammaGallery/js/jquery.masonry.min.js"></script>
+      <script src="../css/GammaGallery/js/jquery.history.js"></script>
+      <script src="../css/GammaGallery/js/js-url.min.js"></script>
+      <script src="../css/GammaGallery/js/jquerypp.custom.js"></script>
+      <script src="../css/GammaGallery/js/gamma.js"></script>
+      
+      
+      
+      <script type="text/javascript">
+			
+			$(function() {
+
+				var GammaSettings = {
+						// order is important!
+						viewport : [ {
+							width : 1200,
+							columns : 5
+						}, {
+							width : 900,
+							columns : 4
+						}, {
+							width : 500,
+							columns : 3
+						}, { 
+							width : 320,
+							columns : 2
+						}, { 
+							width : 0,
+							columns : 2
+						} ]
+				};
+
+				Gamma.init( GammaSettings, fncallback );
+
+
+				// Example how to add more items (just a dummy):
+
+				var page = 0,
+					items = ['<li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li><li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li><li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li><li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li><li><div data-alt="img03" data-description="<h3>Sky high</h3>" data-max-width="1800" data-max-height="1350"><div data-src="images/xxxlarge/3.jpg" data-min-width="1300"></div><div data-src="images/xxlarge/3.jpg" data-min-width="1000"></div><div data-src="images/xlarge/3.jpg" data-min-width="700"></div><div data-src="images/large/3.jpg" data-min-width="300"></div><div data-src="images/medium/3.jpg" data-min-width="200"></div><div data-src="images/small/3.jpg" data-min-width="140"></div><div data-src="images/xsmall/3.jpg"></div><noscript><img src="images/xsmall/3.jpg" alt="img03"/></noscript></div></li>']
+
+				function fncallback() {
+
+					$( '#loadmore' ).show().on( 'click', function() {
+
+						++page;
+						var newitems = items[page-1]
+						if( page <= 1 ) {
+							
+							Gamma.add( $( newitems ) );
+
+						}
+						if( page === 1 ) {
+
+							$( this ).remove();
+
+						}
+
+					} );
+
+				}
+
+			});
+
+		</script>
+      
+  </body>
+
+</html>
