@@ -300,15 +300,16 @@ video#bgvid {
 
 #tg_part_2{
     font-family: Raleway;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 2px;
     color: #DFEBDF;
 }
 
 #tg_part_3{
     font-family: Raleway;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 17px;
+    font-weight: 500;
     color: #DFEBDF;
 }
 
