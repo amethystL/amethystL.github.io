@@ -6,8 +6,8 @@
 </description>
     <link>http://yourdomain.com/</link>
     <atom:link href="http://yourdomain.com/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 03 Feb 2016 00:16:52 +0530</pubDate>
-    <lastBuildDate>Wed, 03 Feb 2016 00:16:52 +0530</lastBuildDate>
+    <pubDate>Thu, 04 Feb 2016 16:39:04 +0530</pubDate>
+    <lastBuildDate>Thu, 04 Feb 2016 16:39:04 +0530</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
       <item>
@@ -61,7 +61,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       </item>
     
       <item>
-        <title>Vibe</title>
+        <title>Aether</title>
         <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
 
@@ -136,7 +136,7 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
       </item>
     
       <item>
-        <title>Aether</title>
+        <title>Vibe</title>
         <description>&lt;p&gt;Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.&lt;/p&gt;
 

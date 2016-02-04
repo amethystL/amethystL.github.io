@@ -6,16 +6,18 @@
   <body>
       
       <div id="mainContainer">
-        <video autoplay loop muted id="bgvid" pause>
+        
+        <video autoplay loop muted id="bgvid">
             <source src="../images/video.mp4" type="video/mp4">
         </video>
+        
       {{ content }}
 
 
     {% include footer.html %}
-
+          
       </div>
-      
+          
   </body>
 
 </html>
