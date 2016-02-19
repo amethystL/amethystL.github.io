@@ -21,6 +21,10 @@
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/set2.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/queryLoader.css">
+    <link rel="stylesheet" href="/css/default.css">
+    <link rel="stylesheet" href="/css/hover-effects.css">
     <link rel="canonical" href="http://yourdomain.com/plugins2/">
     <!-- scripts -->
     <!--<script src="../js/jquery-1.12.0.min.js"></script>-->
@@ -29,13 +33,27 @@
     <script src="../js/sly.min.js"></script>
     <script src="../js/snap.svg-min.js"></script>
     <script src="../js/wow.min.js"></script>
+    <script src="../js/modernizr.custom.js"></script>
+    <script type='text/javascript' src='../js/queryloader2/queryloader2.min.js'></script>
+    <script type='text/javascript'>
+            window.addEventListener('DOMContentLoaded', function() {
+            QueryLoader2(document.querySelector("body"), {
+                barColor: "#fff",
+                backgroundColor: "#111",
+                percentage: true,
+                barHeight: 1,
+                minimumTime: 200,
+                fadeOutTime: 500
+            });
+        });
+    </script>
 </head>
 
     
   <body>
 
       <div id="mainContainer">
-
+          <img src="../images/backgroundMain.png" style="position: absolute; visibility: hidden;" />
           <video autoplay loop muted id="bgvid" >
             <source src="../images/video.mp4" type="video/mp4">
           </video>
@@ -63,7 +81,7 @@
                 <div class="content">
                     <div class="grid">
 					<figure class="effect-ming">
-						<img src="../images/img/img12.png" style="" alt="img09"/>
+						<img src="../images/img/9.jpg" style="" alt="img09"/>
 						<figcaption>
 							<h2>Funny <span>Ming</span></h2>
 							<p>Ming sits.</p>
@@ -174,10 +192,10 @@
     
     <div id="secondColumn" class="grid-100">
         <div id="navigator">
-        <svg id="navSvg" width="543" height="41" style="display: block; margin: auto;">
+        <svg id="navSvg" class="navSvg" width="543" height="41" style="position: relative; display: block; margin: auto; z-index: 1000;">
         </svg>
         <div id="navLabelGroup">
-        <i class="fa fa-caret-up" style=";vertical-align: top; font-size: 13px; color: #95F22E;"></i>
+        <i class="fa fa-caret-up" style="position: relative; vertical-align: top; font-size: 13px; color: #95F22E; z-index: 1000;"></i>
         <span id="navLabel">Home</span>
         </div>
         </div>
@@ -277,7 +295,6 @@
 
       </div>
 
-      
       <!-- scripts -->
       
       

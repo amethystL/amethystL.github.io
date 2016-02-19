@@ -22,8 +22,25 @@ layout: main
         <a class=""><img src="./images/logo2.png" style="width: 100px; height: 100px;" /></a>
         </div>
         
+        <div id="shareIcon">
+            <span><i class="fa fa-share-alt fa-lg"></i></span>
+            <span></span>
+        </div>
+        
         
     </div><!--end secondRow -->
     
 
 </div>
+
+<script type="text/javascript">
+    window.onload = function(){
+        $('#shareIcon').on('mouseenter',function(){
+            $(this).children().eq(1).html('SHARE');
+        });
+        
+        $('#shareIcon').on('mouseleave',function(){
+            $(this).children().eq(1).html('');
+        });
+    }
+</script>
