@@ -13,7 +13,6 @@
 .hi-icon-wrap {
 	text-align: center;
 	margin: 0 auto;
-	padding: 2em 0 3em;
 }
 
 
@@ -21,15 +20,13 @@
 	display: inline-block;
 	font-size: 0px;
 	cursor: pointer;
-	margin: 15px 30px;
-	width: 130px;
-	height: 130px;
+	width: 90px;
+	height: 90px;
 	border-radius: 50%;
 	text-align: center;
 	position: relative;
 	z-index: 1;
 	color: #fff;
-    top: 20px;
 }
 
 .hi-icon:after {
@@ -46,7 +43,7 @@
 
 .hi-icon:before  {
 	speak: none;
-	font-size: 90px;
+	font-size: 60px;
 	line-height: 90px;
 	font-style: normal;
 	font-weight: normal;
@@ -55,7 +52,6 @@
 	display: block;
 	-webkit-font-smoothing: antialiased;
     position: relative;
-    top: 14%;
 }
 /* end global styles */
 
