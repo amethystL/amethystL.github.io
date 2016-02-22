@@ -149,7 +149,6 @@ video#bgvid {
     background-size: cover; 
 }
 
-
 /* layout of the page:
     mainContainer = {container_1,container_2,container_3}
     container_1 = {headerLogo}
@@ -266,6 +265,27 @@ video#bgvid {
     letter-spacing: 2px;
     font-weight: 200;
     top: 0%;
+    z-index: 100;
+}
+
+#elpsycongroo > h1{
+    position: relative;
+    font-family: LemonMilk;
+    color: #f2f2f2;
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    top: 0%;
+    z-index: 100;
+}
+
+#elpsycongroo > p{
+    position: relative;
+    font-family: raleway;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 0px 100px 0px 100px;
+    font-weight: 200;
     z-index: 100;
 }
 

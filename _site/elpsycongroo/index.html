@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>PLUGINS</title>
+    <title>ELPSYCONGROO</title>
     <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 ">
 
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="/css/queryLoader.css">
     <link rel="stylesheet" href="/css/default.css">
     <link rel="stylesheet" href="/css/hover-effects.css">
-    <link rel="canonical" href="http://yourdomain.com/plugins2/">
+    <link rel="canonical" href="http://yourdomain.com/elpsycongroo/">
     <link rel="stylesheet" href="/css/style.css">
     <!-- scripts -->
     <!--<script src="../js/jquery-1.12.0.min.js"></script>-->
@@ -59,131 +59,76 @@
             <source src="../images/video.mp4" type="video/mp4">
           </video>
 
-      <div id="container_0" class="grid-container">
-        
-        
-        
-        <div class="grid-100">
-            
-            <div class="overlay2">
-                <video autoplay loop muted id="bgvid">
-                    <source src="../images/video.mp4" type="video/mp4">
-                </video>
-                <div class="overlay"></div>
-                <a href="#" onclick="closeLightbox()">
-                    <div style="position: relative; border: 1px solid white; width: 50px; height: 50px; float: right; margin: 10px; z-index: 1000;">
-                    </div>
-                </a>
-            </div>
-            
-            <div style="position: absolute; top: 25%; left: 26%; width: 650px; height: 260px; border-left: 1px solid white; border-right: 1px solid white; z-index:100;">
-            </div>
-            
-                <div class="content">
-                    <div class="grid">
-					<figure class="effect-ming">
-						<img src="../images/img/9.jpg" style="" alt="img09"/>
-						<figcaption>
-							<h2>Funny <span>Ming</span></h2>
-							<p>Ming sits.</p>
-							<a href="#" onclick="openLightbox()">View more</a>
-						</figcaption>			
-					</figure>
-					<figure class="effect-ming">
-						<img src="../images/img/8.jpg" alt="img08"/>
-						<figcaption>
-							<h2>Funny <span>Ming</span></h2>
-							<p>Ming sits.</p>
-							<a href="#" onclick="openLightbox()">View more</a>
-						</figcaption>			
-					</figure>
-                    <figure class="effect-ming">
-						<img src="../images/img/9.jpg" alt="img09"/>
-						<figcaption>
-							<h2>Funny <span>Ming</span></h2>
-							<p>Ming sits.</p>
-							<a href="#" onclick="openLightbox()">View more</a>
-						</figcaption>			
-					</figure>
-					<figure class="effect-ming">
-						<img src="../images/img/8.jpg" alt="img08"/>
-						<figcaption>
-							<h2>Funny <span>Ming</span></h2>
-							<p>Ming sits.</p>
-							<a href="#" onclick="openLightbox()">View more</a>
-						</figcaption>			
-					</figure>
-				    </div>
-                </div>
-            
-            
-            
-        </div>
+      <div id="container_4" class="grid-container">
+    <video autoplay loop muted id="bgvid" class="frontvid">
+            <source src="../images/video.mp4" type="video/mp4">
+    </video>
+    <div id="overlay" class="grid-100 full_size" style="background-color: rgba(255,255,255,0.05); opacity: 0.0; position: absolute">
+    </div>
 
+    <div id="mainElem" class="grid-100 full_size" style="opacity: 0.0">
         
+        <div class="grid-container" style="">
+            <div id="elpsycongroo" class="grid-100">
+                <h1 style="position: relative; left: 50%; transform: translateX(-20%);">
+                    EL PSY CONGROO
+                </h1>
+                <p>
+                    This idea may seem ahead of its time, because it is. None of us actually thought 
+of this idea, we were told about it. John Titor, a self proclaimed time traveller,
+posted on @channel about the grim dystopian future, to which he belonged, and wanted
+to change. In the year 2036, SERN(CERN) takes over the earth and the world goes into complete
+anarchy. John believes SERN invented time travel in 2001 itself and used it to transcend 
+and overthrow all the political institutions. Titor wanted to make Grid, as a tool to connect and learn
+about enemy locations but more importantly as a symbol. A symbol of resistance. Within days, he was ready
+with a basic prototype. He and a few more survivors planned to test it on one of their missions to steal SERN
+equipment.The plan was simple but there was one flaw left in Grid which was causing a delay in messages. And 
+this flaw became a major problem as Grid did not notify about enemey movement patterns in time. And then they were 
+spotted. The whole facility was blaring alarms and in a matter of seconds a quite and scientific lab was filled
+with mercs. The team managed to pull off a sneaky escape. They decided to resort to the last option, go back in time
+and stop all this from happening. 
+<br>
+We learnt about this on @channel and thought we should help regardless of how crazy and unbelievable it sounds. So we made
+Grid, or rather fixed it and tweaked it. The delay bug was squashed, a few neat features were added along with a sweet UI.
+In case John fails to defeat the current SERN, he would still have a battle ready Grid. A symbol of resistance. 
+                </p>
+            </div>
+        </div>
         
+    </div>
+    
 </div>
+<div id="container_0"></div>
 
 
 <script type="text/javascript">
-    
-    var elem = $('.overlay2');
-    var closeButton = elem.children().eq(2);
-    closeButton.css('visibility','visible');
-    closeButton.toggle();
-    
-    var grid = $('.grid');
-    
-    var gridMaxWid = grid.css('max-width');
-    
-    var active,maxWid,maxHei,wid,hei;
-    
-    var openLightbox = function(e){
+    $('html,body').css('overflow-y','hidden');
+</script>
+
+
+<script type="text/javascript">
+    window.onload = function(){
         
-        active = $(event.target).parents().eq(1);
+        var elem1 = $('#elpsycongroo > h1');
+        var elem2 = $('#elpsycongroo > p');
         
-        grid.children().filter(function(){
-            return $(this)[0] != active[0]
-        }).toggle();
-        
-        maxWid = active.css('max-width');
-        maxHei = active.css('max-height');
-        wid = active.css('width');
-        hei = active.css('height');
-        
-        active.css('max-width',1000);
-        active.css('max-height',1000);
-        active.css('width','60%');
-        active.css('height','100%');
-        
-        grid.css('max-width',1000);
-        grid.css('left','19.4%');
-        
-        closeButton.toggle();
-        //set the position
+        $({blurRadius: 0}).animate({blurRadius: 10}, {
+        duration: 1000,
+        easing: 'swing',
+        step: function() {
+            $('.frontvid').css({
+                "-webkit-filter": "blur("+this.blurRadius+"px)",
+                "filter": "blur("+this.blurRadius+"px)"
+            });
+            },
+        complete: function(){
+            $('#mainElem').css({opacity: 0.0}).animate({opacity: 1.0},1000,'swing');
+            $('[id=elpsycongroo]').addClass('animated slideInUp');
+        }
+        });
+        $('#overlay').css({opacity: 0.0}).animate({opacity: 1.0},1000,'swing');
         
     }
-    
-    var closeLightbox = function(){
-        
-        //reverting the changes
-        
-        grid.children().filter(function(){
-            return $(this)[0] != active[0]
-        }).toggle();
-        
-        
-        active.css('max-width',maxWid);
-        active.css('max-height',maxHei);
-        active.css('width',wid);
-        active.css('height',hei);
-        
-        grid.css('max-width',gridMaxWid);
-        grid.css('left','auto');
-        
-        closeButton.toggle();
-    }
-    
 </script>
 
 
