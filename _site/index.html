@@ -63,10 +63,10 @@
     
     <div id="main" class="grid-100">
         
-        <p id="tagline">
-        <span id="tg_part_1">AMETHYST LABS</span>
+        <p id="tagline" class="">
+        <span id="tg_part_1" class="wow animated flipInX" style="display: inline-block" data-wow-delay="500ms" data-wow-duration="500ms">AMETHYST LABS</span>
         <br>
-        <span id="tg_part_2">Know Thy Proximity</span>
+        <span id="tg_part_2" class="wow animated flipInX" style="display: inline-block" data-wow-delay="1s" data-wow-duration="500ms">Know Thy Proximity</span>
         <br>
         <span id="tg_part_3"></span>
         </p>
@@ -81,7 +81,6 @@
         
         <div id="shareIcon">
             <span><i class="fa fa-share-alt fa-lg"></i></span>
-            <span></span>
         </div>
         
         
@@ -97,11 +96,11 @@
 <script type="text/javascript">
     window.onload = function(){
         $('#shareIcon').on('mouseenter',function(){
-            $(this).children().eq(1).html('SHARE');
+            
         });
         
         $('#shareIcon').on('mouseleave',function(){
-            $(this).children().eq(1).html('');
+            
         });
     }
 </script>

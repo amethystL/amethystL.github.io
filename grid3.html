@@ -7,15 +7,19 @@ permalink: /grid/
 <div id="container_4" class="grid-container">
     
     <div id="logo_screen" class="full_size grid-100">
-        <h1 style="">GRID</h1>
+        <h1 style="" class="wow animated flipInX" data-wow-delay="500ms" data-wow-duration="500ms">GRID</h1>
         <!--<img src="../images/img/logo28/logo28(1).png" style=""/>-->
         <div id="scrollIcon">
         <img src="../images/img/scroll.png" />
         <span>SCROLL</span>
         </div>
         <div id="shareIcon">
-            <span><i class="fa fa-share-alt fa-lg"></i></span>
-            <span></span>
+            <span id="shareIcon" style="display: inline-block"><i class="fa fa-share-alt fa-lg"></i></span>
+            <!--
+            <span id="facebookIcon" style="margin: 7px; display: inline-block"><i class="fa fa-facebook fa-lg"></i></span>
+            <span id="twitterIcon" style="margin: 7px; display: inline-block"><i class="fa fa-twitter fa-lg"></i></span>
+            <span id="googleplusIcon" style="margin: 7px; display: inline-block"><i class="fa fa-google-plus fa-lg"></i></span>
+            -->
         </div>
     </div>
     
@@ -148,12 +152,12 @@ permalink: /grid/
                 <div class="grid-20">
                     
                     <div style="position: relative; top: 146.5px;">
-                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="">
+                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a wow animated rotateIn" data-wow-delay="600ms">
 				        	<i class='hi-icon fa fa-mobile'></i>
                         </div>
                     </div>
                     <div style="position: relative; top: 288.5px">
-                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="">
+                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a wow animated rotateIn" data-wow-delay="600ms">
       			   	      <i class='hi-icon fa fa-refresh size50'></i>
                         </div>
                     </div>
@@ -230,12 +234,12 @@ permalink: /grid/
                 <div class="grid-20">
                     
                     <div style="position: relative; top: 146.5px;">
-                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="">
+                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a wow animated rotateIn" data-wow-delay="600ms">
 				        	<i class='hi-icon fa fa-mobile fa-lg'></i>
                         </div>
                     </div>
                     <div style="position: relative; top: 288.5px">
-                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="">
+                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a wow animated rotateIn" data-wow-delay="600ms">
       			   	      <i class='hi-icon fa fa-wifi size45'></i>
                         </div>
                     </div>
@@ -312,12 +316,12 @@ permalink: /grid/
                 <div class="grid-20">
                     
                     <div style="position: relative; top: 146.5px;">
-                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="">
+                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a wow animated rotateIn" data-wow-delay="600ms">
 				        	<i class='hi-icon fa fa-bar-chart size45'></i>
                         </div>
                     </div>
                     <div style="position: relative; top: 288.5px">
-                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a" style="">
+                        <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a wow animated rotateIn" data-wow-delay="600ms">
       			   	      <i class='hi-icon fa fa-lightbulb-o'></i>
                         </div>
                     </div>
@@ -359,19 +363,20 @@ permalink: /grid/
     </div>
     
     <div id="fifth_screen" class="full_size grid-100">
-        <div style="width: 80%; height: 80.5%; padding: 30px; margin: 0 auto;">
+        <div style="width: 65%; height: 66%; padding: 30px; margin: 0 auto; top: 50%; transform: translateY(-50%); position: relative;">
             <div style="border: 1px solid white; height: 100%; padding: 0;" class="grid-container">
                 <div class="grid-50" style="height: 100%; padding: 0; background-color: #f2f2f2; text-align: center;">
-                <img style="position: relative; transform: translateY(3%);" src="../images/img/siri_case.png" alt="case_study_1"/>
+                <img style="position: relative; transform: scale(0.9);" src="../images/img/siri_case.png" alt="case_study_1"/>
                 </div>
                 <div class="grid-50" style="height: 100%; padding: 0; background-color: #333236;  text-align: center;">
-                <img style="position: relative; transform: translateY(3%)" src="../images/img/siri_case.png" alt="case_study_1"/>
+                <img style="position: relative; transform: scale(0.9);" src="../images/img/siri_case.png" alt="case_study_1"/>
                 </div>
             </div>
         </div>
     </div>
     
     <div id="sixth_screen" class="full_size grid-100">
+        
     </div>
 
     
@@ -388,34 +393,143 @@ permalink: /grid/
 
 <script type="text/javascript">
     
-        var position = $(window).scrollTop()
-        var logoScreen = $('#logo_screen');
-        var firstScreen = $('#first_screen');
-        var secondScreen = $('#second_screen');
-        var thirdScreen = $('#third_screen');
-        var fourthScreen = $('#fourth_screen');
-        var fifthScreen = $('#fifth_screen');
-        var sixthScreen = $('#sixth_screen');
-        var timeout;
-        var positions = []
-        positions.push(logoScreen.position().top);
-        positions.push(firstScreen.position().top);
-        positions.push(secondScreen.position().top);
-        positions.push(thirdScreen.position().top);
-        positions.push(fourthScreen.position().top);
-        positions.push(fifthScreen.position().top);
-        positions.push(sixthScreen.position().top);
-        console.log(positions);
-        var greyColor = "#333236";
-        var greenDark = "#41AB6B";
-        var whiteColor = "#fff";
-        var closeToW = "#f2f2f2";
+    var position = $(window).scrollTop()
+    var logoScreen = $('#logo_screen');
+    var firstScreen = $('#first_screen');
+    var secondScreen = $('#second_screen');
+    var thirdScreen = $('#third_screen');
+    var fourthScreen = $('#fourth_screen');
+    var fifthScreen = $('#fifth_screen');
+    var sixthScreen = $('#sixth_screen');
+    var timeout;
+    var positions = []
+    positions.push(logoScreen.position().top);
+    positions.push(firstScreen.position().top);
+    positions.push(secondScreen.position().top);
+    positions.push(thirdScreen.position().top);
+    positions.push(fourthScreen.position().top);
+    positions.push(fifthScreen.position().top);
+    positions.push(sixthScreen.position().top);
+    var greyColor = "#333236";
+    var greenDark = "#41AB6B";
+    var whiteColor = "#fff";
+    var closeToW = "#f2f2f2";
+    var loop = [];
+    var looplength = [];
+    var line = [];
+    var visitedViewports = [];
     
     
     
+    var svgAnim = function(i,j,loop,looplength,line,duration,callback){
+        Snap.animate(0,looplength[i][j],function(step){
+                line[i][j].attr({
+                    path: Snap.path.getSubpath(loop[i][j],0,step),
+                })
+        },duration,callback);
+        return ;
+    }
     
-    
-    
+    var svgAnimate = function(viewport,callback){
+        
+        var screenWidth = $(window).width();
+        var screenHeight = $(window).height();
+        var snapSvg0 = Snap("#frontTimeline");
+        snapSvg0.attr({
+            fill: "none",
+            stroke: "#fff",
+            strokeWidth: 1,
+            strokeDasharray: "10 10",
+        });
+        
+        
+        // viewport 1
+        var contentBox3 = $('[id=content_box3]');
+        var contentBox4 = $('#content_box4');
+        var temp = $(contentBox3[0]).children().eq(0);
+        var x1 = temp.offset().left+temp.width();
+        var y1 = temp.offset().top+temp.height()/2;
+        temp = $(contentBox3[1]).children().eq(0);
+        var x4 = temp.offset().left;
+        var y4 = temp.offset().top+temp.height()/2;
+        temp = $(contentBox4).children().eq(0);
+        var x2 = temp.offset().left;
+        var y2 = temp.offset().top+temp.height()/2;
+        var x3 = x2 + temp.width();
+        var y3 = y2;
+        temp = $(contentBox4).children().eq(0);
+        var x5 = temp.offset().left+temp.width()/2;
+        var y5 = temp.offset().top+temp.height();
+        var duration = 500;
+        
+        loop.push(["M"+x1+" "+y1+" L"+x2+" "+y2,"M"+x3+" "+y3+" L"+x4+" "+y4,"M"+x5+" "+y5+" L"+x5+" "+screenHeight]);
+        looplength.push([x2-x1,x4-x3,screenHeight-y5]);
+        line.push([snapSvg0.path({
+            path: Snap.path.getSubpath(loop[0][0],0,0),
+        }),snapSvg0.path({
+            path: Snap.path.getSubpath(loop[0][1],0,0),
+        }),snapSvg0.path({
+            path: Snap.path.getSubpath(loop[0][2],0,0),
+        })
+                  ]);
+        
+        //viewport 2,3,4
+        var contentBox2 = $('[id=content_box2]');
+        var iter = 0;
+        for( var i = 0 ; i < contentBox2.length; i+=2){
+            
+            var temp = $(contentBox2[i]).children().eq(0);
+            var temp1 = $(contentBox2[i+1]).children().eq(0);
+            x1 = screenWidth/2;
+            y1 = temp.offset().top+temp.height()/2;
+            x2 = temp.offset().left+temp.width();
+            x3 = temp1.offset().left;
+            y2 = temp1.offset().top+temp.height()/2;
+            
+            
+            
+            loop.push(["M"+x1+" "+y1+" "+x2+" "+y1,"M"+x1+" "+y2+" L"+x3+" "+y2,"M"+x5+" "+(iter+1)*screenHeight+" L"+x5+" "+(iter+2)*screenHeight])
+            looplength.push([Math.abs(x2-x1),Math.abs(x3-x1),screenHeight]);
+            line.push([snapSvg0.path({
+                path: Snap.path.getSubpath(loop[iter][0],0,0),
+            }),snapSvg0.path({
+                path: Snap.path.getSubpath(loop[iter][1],0,0),
+            }),snapSvg0.path({
+                path: Snap.path.getSubpath(loop[iter][2],0,0),
+            })
+                      ]);
+            iter += 1;
+            
+        }
+        
+        //viewport 5
+        loop.push(["M"+x5+" "+4*screenHeight+" L"+x5+" "+5*screenHeight])
+        looplength.push([screenHeight]);
+        line.push([snapSvg0.path({
+            path: Snap.path.getSubpath(loop[4][0],0,0),
+            strokeDasharray: "0 0"
+        })]);
+        
+        
+        //viewport 6
+        loop.push(["M"+x5+" "+5*screenHeight+" L"+x5+" "+6*screenHeight,"M"+x5+" "+5*screenHeight+" L"+x5+" "+6*screenHeight])
+        looplength.push([screenHeight,screenHeight]);
+        line.push([snapSvg0.path({
+            path: Snap.path.getSubpath(loop[5][0],0,0),
+            strokeDasharray: "0 0"
+        }),snapSvg0.path({
+            path: Snap.path.getSubpath(loop[5][0],0,0),
+            strokeDasharray: "0 0"
+        })]);
+        
+        
+        //animation
+        //give viewport name
+        for( var j = 0 ; j < looplength[viewport-1].length; j++){
+            svgAnim(viewport-1,j,loop,looplength,line,duration,callback);
+        }
+        
+    }
     
     
     
@@ -438,17 +552,19 @@ permalink: /grid/
         
         var foot = $('#navSvg');
         var elem = $('#navLabelGroup')
-        foot.attr('class','animated slideOutDown');
-        elem.attr('class','animated slideOutDown');
+        setTimeout(function(){
+            foot.attr('class','animated slideOutDown');
+            elem.attr('class','animated slideOutDown');
+        },1000);
         
         
         //populate the icons initially
         $('#shareIcon').on('mouseenter',function(){
-            $(this).children().eq(1).html('SHARE');
+            
         });
         
         $('#shareIcon').on('mouseleave',function(){
-            $(this).children().eq(1).html('');
+            
         });       
         //end
         
@@ -459,62 +575,6 @@ permalink: /grid/
         var front_timeline = $('#frontTimeline');
         front_timeline.attr('width',screenWidth);
         front_timeline.attr('height',documentHeight);
-        
-        
-        
-        //first screen lines
-        
-        var contentBox3 = $('[id=content_box3]');
-        var contentBox4 = $('#content_box4');
-        var temp = $(contentBox3[0]).children().eq(0);
-        var x1 = temp.offset().left+temp.width();
-        var y1 = temp.offset().top+temp.height()/2;
-        temp = $(contentBox3[1]).children().eq(0);
-        var x4 = temp.offset().left;
-        var y4 = temp.offset().top+temp.height()/2;
-        temp = $(contentBox4).children().eq(0);
-        var x2 = temp.offset().left;
-        var y2 = temp.offset().top+temp.height()/2;
-        var x3 = x2 + temp.width();
-        var y3 = y2;
-        temp = $(contentBox4).children().eq(0);
-        var x5 = temp.offset().left+temp.width()/2;
-        var y5 = temp.offset().top+temp.height();
-        
-        
-        var snapSvg0 = Snap("#frontTimeline");
-        snapSvg0.attr({
-            fill: "none",
-            stroke: "#fff",
-            strokeWidth: 1,
-            strokeDasharray: "10 10",
-        });
-        
-        snapSvg0.line(x1,y1,x2,y2);
-        snapSvg0.line(x3,y3,x4,y4);
-        snapSvg0.line(x5,y5,x5,6*screenHeight);
-        
-        //end
-        
-        
-        //second,third,fourth screen lines
-        var contentBox2 = $('[id=content_box2]');
-        
-        for( var i = 0 ; i < contentBox2.length; i++){
-            temp = $(contentBox2[i]).children().eq(0);
-            
-            if( i%2 != 0){
-                x1 = temp.offset().left;
-            }
-            else{
-                x1 = temp.offset().left+temp.width();
-            }
-            
-            y1 = temp.offset().top+temp.height()/2;
-            snapSvg0.line(screenWidth/2,y1,x1,y1);
-            
-        }
-        
         
         var elements = $('.flip-container:in-viewport');
         for( var i = 0; i < elements.length; i++){
@@ -527,13 +587,13 @@ permalink: /grid/
         }
         
         
-        
-        
-        
+        if ( String(elements[0]) != 'undefined' )
+        if( $(elements[0]).hasClass('flip') == false ){
+            svgAnimate(1);
+            visitedViewports.push(1);
+        }
         
     }
-    
-    
     
     
     
@@ -569,11 +629,34 @@ permalink: /grid/
             }
             
             if( scroll > position){
-                console.log(scroll);
                 var screenNo = getCurrentScreen(scroll);
-                console.log(screenNo);
                 // go to screenNo + 1
-                var newOps = $.extend(AnimOps,{complete: function(){  enableScroll(); position = $(window).scrollTop(); }}, {start: function(){ disableScroll(); } })
+                var newOps = $.extend(
+                AnimOps,
+                {
+                    complete: function(){  
+                        enableScroll(); 
+                        position = $(window).scrollTop();
+                        if( visitedViewports.indexOf(screenNo+1) == -1){
+                            visitedViewports.push(screenNo+1);
+                            if( screenNo+1 == 6){
+                                var callback = function(){
+                                    
+                                }
+                                svgAnimate(screenNo+1,callback)
+                            }
+                            else{
+                                svgAnimate(screenNo+1);
+                            }
+                        }
+                    } 
+                },
+                {
+                    start: function(){ 
+                        disableScroll(); 
+                    } 
+                }
+                )
                 
                 $('body').animate({
                     scrollTop: positions[screenNo+1]
@@ -583,9 +666,32 @@ permalink: /grid/
             else if(scroll < position){
                 
                 var screenNo = getCurrentScreen(scroll);
-                console.log(screenNo);
-                var newOps = $.extend(AnimOps,{complete: function(){  enableScroll(); position = $(window).scrollTop(); }}, {start: function(){
-                    disableScroll(); } })
+                var newOps = $.extend(
+                AnimOps,
+                {
+                    complete: function(){  
+                        enableScroll(); 
+                        position = $(window).scrollTop(); 
+                        if( visitedViewports.indexOf(screenNo) == -1){
+                            visitedViewports.push(screenNo);
+                            if( screenNo == 6){
+                                var callback = function(){
+                                    console.log('end');
+                                }
+                                svgAnimate(screenNo,callback);
+                            }
+                            else{
+                                svgAnimate(screenNo);
+                            }
+                        }
+                    }
+                }, 
+                {
+                    start: function(){
+                    disableScroll(); 
+                    } 
+                }
+                )
                 // go to screenNo
                 $('body').animate({
                     scrollTop: positions[screenNo]
@@ -599,7 +705,6 @@ permalink: /grid/
     scroll < positions[2]
     
     var getCurrentScreen = function(scroll){
-        console.log(scroll);
             if(scroll < positions[2]){
                 return 1;
             }
