@@ -279,6 +279,18 @@ video#gridvid {
     z-index: 100;
 }
 
+#pluginsPageHeading{
+    position: absolute;
+    font-family: LemonMilk;
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    top: 0%;
+    z-index: 100;
+    left: 40%;
+}
+
 #elpsycongroo > h1{
     position: relative;
     font-family: LemonMilk;
@@ -298,6 +310,43 @@ video#gridvid {
     padding: 0px 180px 0px 180px;
     font-weight: 200;
     z-index: 100;
+}
+
+#coming_soon{
+    position: relative;
+    top: 20%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.signUp{
+    font-family: raleway;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.signUp > h1{
+    font-family: raleway;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #f2f2f2
+}
+
+#signUp > #inp{
+    display: inline-block;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.coming_soon_text{
+    top: 40%;
+    position: relative;
+    font-family: raleway;
+    color: #f2f2f2;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: 200;
+    letter-spacing: 2px;
 }
 
 /*
@@ -692,9 +741,9 @@ textarea:focus, input:focus{
 .overlay2{
     position: absolute;
     left: 23%;/*20*/
-    top: 10%;
+    top: 20.5%;
     width: 54%;
-    height: 70%;
+    height: 58%;
     margin: 0 auto;
     /*border: 1px solid white;*/
     overflow: hidden;
@@ -709,29 +758,6 @@ textarea:focus, input:focus{
     filter:blur(10px);
     -webkit-filter: blur(10px);
 }
-
-/*
-.expandOnLoad{
-    position: absolute; 
-    left: 15%; 
-    top: 23%; 
-    width: 0%; 
-    height: 85%; 
-    border-bottom: 1px solid white; 
-    border-top: 1px solid white;
-    animation: expand 1s ease-in-out 0.5s forwards;
-}
-
-.animated{
-    animation-delay: 1.5s
-}
-
-@keyframes expand{
-    0% { width: 0%;}
-    100% {width: 70%;}
-}
-*/
-
 
 .content {
 	margin: 0 auto;
@@ -780,7 +806,7 @@ textarea:focus, input:focus{
 
 div.text {
     position: relative;
-    top: 10%;
+    top: 20%;
 }
 
 div.text > p {

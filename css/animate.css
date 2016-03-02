@@ -1954,38 +1954,28 @@
 
 @-webkit-keyframes flipOutX {
   from {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-  }
-
-  30% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
     opacity: 1;
   }
 
   to {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 150deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 150deg);
     opacity: 0;
   }
 }
 
 @keyframes flipOutX {
   from {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
-  }
-
-  30% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 0deg);
     opacity: 1;
   }
 
   to {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 150deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 150deg);
     opacity: 0;
   }
 }
@@ -1993,8 +1983,8 @@
 .flipOutX {
   -webkit-animation-name: flipOutX;
   animation-name: flipOutX;
-  -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 }
 
 @-webkit-keyframes flipOutY {
