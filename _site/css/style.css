@@ -138,6 +138,16 @@ html,body{
     overflow-x: hidden;
 }
 
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+a:visited{
+    text-decoration: inherit;
+    color: inherit;
+}
+
 
 video#bgvid { 
     position: fixed;
@@ -179,14 +189,22 @@ video#gridvid {
     z-index: 10;
 }
 
+
 #container_1{
-    height: 12%;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
 }
 
+/*
 #container_2{
     height: 75%;
     padding-top: 30px;
 }
+*/
 
 #container_3{
     position: absolute;
@@ -216,7 +234,21 @@ video#gridvid {
 }
 
 #shareIcons{
+    position: relative;
     padding-top: 20px;
+    left: 20px;
+}
+
+#facebookIcon:hover{
+    color: #405D9B;
+}
+
+#twitterIcon:hover{
+    color: #59ADEB;
+}
+
+#googleplusIcon:hover{
+    color: #D64136;
 }
 
 #revealedIcons{
@@ -360,8 +392,7 @@ video#gridvid {
 
 #scrollIcon{
     position: fixed;
-    visibility: visible;
-    width: 10px;
+    width: 200px;
     left: 2%;
     bottom: 8%;
 }
@@ -386,18 +417,26 @@ video#gridvid {
 
 #shareIcon{
     position: fixed;
-    visibility: visible;
     right: 2%;
     bottom: 5%;
     z-index: 100;
+    cursor: pointer;
 }
 
-#shareIcon > i{
+#shareIcon > span{
+    font-family: raleway;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 9px;
     color: #fff;
     z-index: 100;
 }
 
-#shareIcon > span{
+#shareIcons{
+    display: inline-block;
+}
+
+#shareIcons > span{
     font-family: raleway;
     font-weight: 300;
     letter-spacing: 3px;
@@ -588,8 +627,17 @@ video#gridvid {
 #navLabelGroup{
     position: relative;
     display: table;
-    left: -3px;
     z-index: inherit;
+}
+
+#navLabelGroup > i {
+    transform: translateX(-40%);
+}
+
+#navLabelGroup > span{
+    position: relative;
+    display: inline-block;
+    transform: translateX(-4%);
 }
 
 #contactForm{
@@ -715,21 +763,6 @@ textarea:focus, input:focus{
     z-index: 20;
 }
 
-/*
-.part2{
-    animation: example 0.7s ease-out 1s forwards;
-}
-
-.part1{
-    animation: example 0.7s ease-out 1s forwards;
-}
-
-@keyframes example{
-    0% {top: 0%;}
-    100%{top: -100%;}
-}
-*/
-
 .overlay{
     position: absolute;
     background-color: rgba(255,255,255,0.06);
@@ -756,6 +789,11 @@ textarea:focus, input:focus{
     left: -42%;/*33.5*/
     top: -13.5%;
     filter:blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+.frontvid{
+    filter: blur(10px);
     -webkit-filter: blur(10px);
 }
 
@@ -874,6 +912,34 @@ div.text > h1{
 }
 
 .back{
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.f-c{
+    position: relative;
+    perspective: 1000px;
+}
+.f{
+    position: relative;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+}
+.fr,.ba{
+    position: absolute;
+    backface-visibility: hidden;
+}
+.f-c:hover .f, .f-c.hover .f, .f{
+		transform: rotateY(180deg);
+}
+.fr{
+    z-index: 3;
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+}
+.ba{
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
     -moz-transform: rotateY(180deg);

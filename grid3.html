@@ -1,14 +1,15 @@
 ---
-layout: default2
-title: GRID
+layout: main
+title: Grid
 permalink: /grid/
 ---
 
-<div id="container_4" class="grid-container">
+
+<!-- container_4 , svg -->
+<div id="container_4" class="grid-container" style="">
     
     <div id="logo_screen" class="full_size grid-100">
-        <h1 style="" class="wow animated flipInX" data-wow-delay="500ms" data-wow-duration="500ms">GRID</h1>
-        <!--<img src="../images/img/logo28/logo28(1).png" style=""/>-->
+        <h1 style="" class="animated flipInX" data-wow-delay="500ms" data-wow-duration="500ms">GRID</h1>
         <div id="scrollIcon">
         <img src="../images/img/scroll.png" />
         <span>SCROLL</span>
@@ -199,7 +200,6 @@ permalink: /grid/
     </div>
     
     <div id="third_screen" class="full_size grid-100">
-        harlem shake dtu
         <div class="grid-container" style="padding: 0;">
             <div class="grid-100 grid-parent" style="height: 659px;">
                 <div class="grid-40" style="height: 659px; padding-top: 60px;">
@@ -245,7 +245,7 @@ permalink: /grid/
                     </div>
                     
                 </div>
-                harlem shake dtu
+                
                 <div class="grid-40" style="height: 659px; padding-top: 30px;">
                     
                     <div id="content_box2" style="">
@@ -385,7 +385,7 @@ permalink: /grid/
 </div>
 
 <!-- do not touch this -->
-<svg id="frontTimeline" width="1000" height="500" style="position: absolute; left: 0; top: 0;">
+<svg id="frontTimeline" width="1000" height="500" style="position: absolute; left:0; top: 0;">
 </svg>
 
 <div id="container_0"></div>
@@ -464,6 +464,8 @@ permalink: /grid/
         var y5 = temp.offset().top+temp.height();
         var duration = 500;
         
+        console.log(x1,y1,x2,y2,x3,y3,x4,y4,x5,y5);
+        
         loop.push(["M"+x1+" "+y1+" L"+x2+" "+y2,"M"+x3+" "+y3+" L"+x4+" "+y4,"M"+x5+" "+y5+" L"+x5+" "+screenHeight]);
         looplength.push([x2-x1,x4-x3,screenHeight-y5]);
         line.push([snapSvg0.path({
@@ -530,6 +532,8 @@ permalink: /grid/
         
         //animation
         //give viewport name
+        console.log(line);
+        console.log(viewport);
         for( var j = 0 ; j < looplength[viewport-1].length; j++){
             svgAnim(viewport-1,j,loop,looplength,line,duration,callback);
         }
@@ -592,6 +596,7 @@ permalink: /grid/
             }
         }        
         
+        
         if ( String(elements[0]) != 'undefined' )
         if( $(elements[0]).hasClass('flip') == false ){
             svgAnimate(1);
@@ -599,18 +604,8 @@ permalink: /grid/
         }
         
         
+        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     var handleScroll = function(){
@@ -644,6 +639,7 @@ permalink: /grid/
                     complete: function(){  
                         enableScroll(); 
                         position = $(window).scrollTop();
+                        
                         if( visitedViewports.indexOf(screenNo+1) == -1){
                             visitedViewports.push(screenNo+1);
                             if( screenNo+1 == 6){
@@ -677,8 +673,21 @@ permalink: /grid/
                 AnimOps,
                 {
                     complete: function(){  
-                        enableScroll(); 
+                        enableScroll();
                         position = $(window).scrollTop(); 
+                        
+                        if(screenNo == 1){
+                            var elements = $('.flip-container:in-viewport');
+                            for( var i = 0; i < elements.length; i++){
+                                if( $(elements[i]).hasClass('flip') == true ){
+                                    elements[i].classList.toggle('flip');
+                                }
+                                else{
+                                    continue;
+                                }
+                            }
+                        }
+                        
                         if( visitedViewports.indexOf(screenNo) == -1){
                             visitedViewports.push(screenNo);
                             if( screenNo == 6){

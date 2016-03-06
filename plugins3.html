@@ -1,12 +1,13 @@
 ---
-layout: default2
-title: PLUGINS
+layout: main
+title: Plugins
 permalink: /plugins/
 ---
 
+<!-- container_4 , grid -->
 
 
-<div id="container_0" class="grid-container">
+<div id="container_4" class="grid-container">
         
         
         
@@ -51,12 +52,12 @@ permalink: /plugins/
                 </h1>
             </div>
             
-            <div class="pluginsBorder" style="position: fixed; top: 31%; left: 26%; width: 650px; height: 260px; border-left: 1px solid white; border-right: 1px solid white; z-index:100;">
+            <div class="pluginsBorder" style="position: absolute; top: 30%; left: 26%; width: 650px; height: 260px; border-left: 1px solid white; border-right: 1px solid white; z-index:100;">
             </div>
             
             
                 <div class="content">
-                    <div class="grid" style="top: 44px;">
+                    <div class="grid" style="top: 35px;">
 					<figure class="effect-ming">
 						<img src="../images/img/logo9.png" style="" alt="img09"/>
 						<figcaption>
@@ -96,8 +97,12 @@ permalink: /plugins/
         
 </div>
 
+<div id="container_0"></div>
 
 
+<script type="text/javascript">
+    $('html,body').css('overflow-y','hidden');
+</script>
 
 <script type="text/javascript">
     
@@ -182,7 +187,6 @@ permalink: /plugins/
                     duration: closeButtonDuration,
                     easing: "linear",
                 });
-                grid.css('visibility','hidden');
                 var image = active.children().eq(0).clone();
                 image.addClass('animated slideInLeft');
                 image.css({
@@ -201,6 +205,7 @@ permalink: /plugins/
                 },
              }
         );
+        
         
         //set the position
         
@@ -242,19 +247,16 @@ permalink: /plugins/
             duration: 600,
             easing: "easeInQuart",
             queue: true,
-            start: function(){
-                
-                },
             complete: function(){
                 borders.animate({
-            height: "toggle",
-            top: borderTop,
-        },{
-            duration: borderDuration,
-            easing: "easeOutQuart",
-            queue: true,
-            }
-        );
+                    height: "toggle",
+                    top: borderTop,
+                },{
+                    duration: borderDuration,
+                    easing: "easeOutQuart",
+                    queue: true,
+                }
+                );
                 grid.children().removeClass('animated zoomOut');
                 grid.children().addClass('animated zoomIn');
                 prev_image.remove();
