@@ -230,10 +230,12 @@ In case John fails to defeat the current SERN, he would still have a battle read
             var line = lines[i];
             line.hover(function(e){
                 if(this != selectedElem){
+                    $('#navigator').css({'cursor':'pointer'});
                     animatedUp(this);
                 }
             },function(e){
                 if(this != selectedElem){
+                    $('#navigator').css({'cursor':'auto'});
                     animateDown(this);
                 }
             }

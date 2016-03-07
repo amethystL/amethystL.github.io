@@ -69,9 +69,8 @@
         <img src="../images/img/scroll.png" />
         <span>SCROLL</span>
     </div>
-    <div id="scrollIcon" class="fr animated flipInX" style="">
-        <img src="../images/img/scroll.png" />
-        <span>SIDE-SCROLL</span>
+    <div id="scrollIcon" class="fr animated flipInX" style="left: 0px">
+        <span>Copyright © Amethyst Labs.</span>
     </div>
     
     <div id="shareIcon">
@@ -1845,6 +1844,10 @@ In case John fails to defeat the current SERN, he would still have a battle read
                     signUpflag = false;
                 }
             }
+            if(currentQuery == map['s']){
+                signUpflag = true;    
+            }
+            
             textArea.attr('maxlength','100');
             var value = queries[currentQuery];
             var template = templates[value[0]];
@@ -2006,10 +2009,12 @@ In case John fails to defeat the current SERN, he would still have a battle read
             var line = lines[i];
             line.hover(function(e){
                 if(this != selectedElem){
+                    $('#navigator').css({'cursor':'pointer'});
                     animatedUp(this);
                 }
             },function(e){
                 if(this != selectedElem){
+                    $('#navigator').css({'cursor':'auto'});
                     animateDown(this);
                 }
             }

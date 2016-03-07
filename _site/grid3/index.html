@@ -577,10 +577,12 @@
             var line = lines[i];
             line.hover(function(e){
                 if(this != selectedElem){
+                    $('#navigator').css({'cursor':'pointer'});
                     animatedUp(this);
                 }
             },function(e){
                 if(this != selectedElem){
+                    $('#navigator').css({'cursor':'auto'});
                     animateDown(this);
                 }
             }
