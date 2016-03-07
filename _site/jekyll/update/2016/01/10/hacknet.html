@@ -135,6 +135,16 @@ Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne 
 
 <script>
     
+    //adding favicon and title dynamically
+    var title = "Amethyst Labs"
+    document.title = title;
+    var link = document.createElement('link');
+    link.rel = "shortcut icon"
+    link.href = "../images/favicon.png"
+    link.type = "image/x-icon"
+    document.getElementsByTagName('head')[0].appendChild(link)
+    //end
+    
     new WOW().init();
     
     var selectedElem;

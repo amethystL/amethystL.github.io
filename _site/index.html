@@ -69,8 +69,8 @@
         <img src="../images/img/scroll.png" />
         <span>SCROLL</span>
     </div>
-    <div id="scrollIcon" class="fr animated flipInX" style="left: 0px">
-        <span>Copyright © Amethyst Labs.</span>
+    <div id="scrollIcon" class="fr animated flipInX" style="left: 0px; text-transform: uppercase;">
+        <span style="top: 0px;">Copyright © Amethyst Labs.</span>
     </div>
     
     <div id="shareIcon">
@@ -1944,6 +1944,16 @@ In case John fails to defeat the current SERN, he would still have a battle read
 </footer>
 
 <script>
+    
+    //adding favicon and title dynamically
+    var title = "Amethyst Labs"
+    document.title = title;
+    var link = document.createElement('link');
+    link.rel = "shortcut icon"
+    link.href = "../images/favicon.png"
+    link.type = "image/x-icon"
+    document.getElementsByTagName('head')[0].appendChild(link)
+    //end
     
     new WOW().init();
     
