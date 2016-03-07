@@ -136,6 +136,8 @@
     //adding favicon and title dynamically
     var title = "Amethyst Labs"
     document.title = title;
+    console.log($('head'))
+    console.log(document.getElementsByTagName('head'));
     var link = document.createElement('link');
     link.rel = "shortcut icon"
     link.href = "../images/favicon.png"
