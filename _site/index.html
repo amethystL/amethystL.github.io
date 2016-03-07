@@ -457,23 +457,80 @@
         
     </div>
     
-    <!--
     <div id="fifth_screen" class="full_size grid-100">
-        <div style="width: 65%; height: 66%; padding: 30px; margin: 0 auto; top: 50%; transform: translateY(-50%); position: relative;">
-            <div style="border: 1px solid white; height: 100%; padding: 0;" class="grid-container">
-                <div class="grid-50" style="height: 100%; padding: 0; background-color: #f2f2f2; text-align: center;">
-                <img style="position: relative; transform: scale(0.9);" src="../images/img/siri_case.png" alt="case_study_1"/>
+        <div id="queryContainer" class="grid-container" style="position: relative; width: 100%; height: 100%; margin: 0 auto; background-color: rgba(0,0,0,0.9)">
+            <div id="status" class="grid-100" style="height: 10%;">
+            </div>
+            <div class="grid-100 grid-parent" style="height: 80%;">
+                <div class="grid-50">
+                    <form id="queryForm" method="POST" action="#">
+                    </form>
+                    <div id="queryBoxParent">
+                        <textarea id="queryBox" cols="40" rows="2" onkeypress="return submitForm(event)" onclick = "$(this).html('')" spellcheck="false" name="query" form="queryForm" maxlength="100">Enter your query</textarea>
+                        <span id="comment">TYPE IN HERE</span>
+                        <div style="position: relative; width: 100%; height: 30%; top: 20%;">
+                            <div style="text-align: center; width: 33%; height: 100%; display: inline-block; border-right: 1px solid white; float: left;">
+                                <div id="statusBox1">
+                                    <h1>25</h1>
+                                    <p>Queries</p>
+                                </div>
+                            </div>
+                            <div style="text-align: center; width: 33%; height: 100%; display: inline-block; border-right: 1px solid white; float: left">
+                                <div id="statusBox2">
+                                    <h1>45</h1>
+                                    <p>Connected</p>
+                                </div>
+                            </div>
+                            <div style="text-align: center; width: 33%; height: 100%; display: inline-block">
+                                <div id="statusBox3">
+                                    <h1>4</h1>
+                                    <p>Online</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="grid-50" style="height: 100%; padding: 0; background-color: #333236;  text-align: center;">
-                <img style="position: relative; transform: scale(0.9);" src="../images/img/siri_case.png" alt="case_study_1"/>
+                <div class="grid-50" style="position: relative; left: 50%;">
+                    <div id="queryResult" style="position: relative; background-color: #f2f2f2; top: 67px;">
+                        <div class="grid-container" style="height: 100%;">
+                            <div class="grid-100" style="height: 70%;width: 100%;padding: 30px;">
+                                <div class="resultScreen">
+                                    <div class="animated slideInUp" id="type1" style="position: relative"><p style="margin: 0;"><span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;">45</span> users are connected to you.</p><p style="margin: 0;">among them<span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;"> 4 </span>are online.</p></div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="grid-100" style="height: 30%;width: 100%;text-align: center;">
+                                <div style="
+                                            width: 30%;
+                                            border: 3px solid #41AB6B;
+                                            margin: 0 auto;
+                                            "></div>
+                                <p style="
+                                        position: relative;
+                                        top: 30%;
+                                        transform: translateY(-50%);
+                                        "><span style="
+                                    font-family: raleway;
+                                    font-size: 1.3em;
+                                    color: #41AB6B;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    cursor: pointer;
+                                    " onclick="return submitForm(event)">Sign Up For Public Beta</span></p>
+                                <p style="
+                                        font-family: raleway;
+                                        font-size: 0.7em;
+                                        font-weight: 400;
+                                        position: relative;
+                                        top: 25px;
+                                        ">GRID | THE SMARTEST NETWORK</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    -->
-    
-    <div id="fifth_screen" class="full_size grid-100">
-        
     </div>
 
     
@@ -737,6 +794,7 @@ In case John fails to defeat the current SERN, he would still have a battle read
         }
     }
     
+    var newAnimationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
     function slideFooter(value){
         //value : 0(down)
         var foot = $('#navSvg');
@@ -750,11 +808,11 @@ In case John fails to defeat the current SERN, he would still have a battle read
         else{
             if( foot.attr('class').split(' ').indexOf('slideOutDown') != -1 ){
                         foot.attr('class','animated slideInUp');
-                        elem.attr('class','animated slideInUp');
+                        elem.attr('class','animated slideInUp').css('opacity','1');
                 }
         }
     }
-    var newAnimationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+
     var flag = false;
     var flag2 = false;
     var f1 = false;
@@ -1083,13 +1141,16 @@ In case John fails to defeat the current SERN, he would still have a battle read
     }
     
     function changePage(e,selectedElem,clickedElem){
-        var anim = false;
+        var anim;
         // right 39 , left 37
         if(e.type == 'keydown'){
             var keys = {39 : 1, 37: 1}
             if( String(e.keyCode) == String(39) ){
                 if(index == 0){
                     anim = true;
+                }
+                else{
+                    anim = false;
                 }
                 if( index < 3 ){
                     var el = getElem(index+1);
@@ -1107,6 +1168,9 @@ In case John fails to defeat the current SERN, he would still have a battle read
             else if( String(e.keyCode) == String(37) ){
                 if(index == 2){
                     anim = true;
+                }
+                else{
+                    anim = false;
                 }
                 if( index > 0 ){
                     var el = getElem(index-1);
@@ -1128,6 +1192,9 @@ In case John fails to defeat the current SERN, he would still have a battle read
             if(clickedElem == 1){
                 anim = true;
             }
+            else{
+                anim = false;
+            }
         }
         
         if(anim == true){
@@ -1136,17 +1203,25 @@ In case John fails to defeat the current SERN, he would still have a battle read
             $('.fr').removeClass('flipInX');
             $('.fr').addClass('flipOutX');
         }
-        else{
+        else if(anim == false){
             $('.ba').removeClass('flipInX');
             $('.ba').addClass('flipOutX');
             $('.fr').removeClass('flipOutX');
             $('.fr').addClass('flipInX');
         }
-        
-        anim = false;
     }
     
     //stuff related to grid page
+    
+    //styling last page
+    var queryResult = $('#queryResult');
+    var queryBoxParent = $('#queryBoxParent');
+    
+    queryResult.css({
+        'width': queryBoxParent.css('width'),
+        'height': queryBoxParent.css('height'),
+    });
+    
     
     var position = $(window).scrollTop()
     var logoScreen = $('#logo_screen');
@@ -1155,7 +1230,6 @@ In case John fails to defeat the current SERN, he would still have a battle read
     var thirdScreen = $('#third_screen');
     var fourthScreen = $('#fourth_screen');
     var fifthScreen = $('#fifth_screen');
-    var sixthScreen = $('#sixth_screen');
     var timeout;
     var positions = []
     positions.push(logoScreen.position().top);
@@ -1164,7 +1238,6 @@ In case John fails to defeat the current SERN, he would still have a battle read
     positions.push(thirdScreen.position().top);
     positions.push(fourthScreen.position().top);
     positions.push(fifthScreen.position().top);
-    //positions.push(sixthScreen.position().top);
     var greyColor = "#333236";
     var greenDark = "#41AB6B";
     var whiteColor = "#fff";
@@ -1730,7 +1803,120 @@ In case John fails to defeat the current SERN, he would still have a battle read
         
     }
     
+    //functions related to query page
     
+    var queries = {
+        '*': [2,'This query can\'t be made.'],
+        '|': [2,'Thankyou for signing up'],
+        'Sign Up for public beta': [2,'Type your email and press Enter.'],
+    }
+    
+    var templates = {
+        1 : ' <div class="animated slideInUp" id="type1" style="position: relative"><p style="margin: 0;"><span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;">%d</span> %s</p><p style="margin: 0;">%s<span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;"> %d </span>%s</p></div>',
+        2 : ' <div class="animated slideInUp" id="type2" style="position: relative;"><p style="font-size: 2em">%s</p></div>',
+        3 : ' <div class="animated slideInUp" id="type2" style="position: relative;"><p style="font-size: 3em">%s</p></div>'
+    }
+    
+    var map = {
+        's': 'Sign Up for public beta',
+    }
+    
+    var currentQuery = "";
+    var signUpflag = false;
+    function submitForm(event){
+        
+        var textArea = $('textarea');
+                
+        if(event.keyCode == 13){
+            textArea.blur();
+            if(currentQuery.length != 0){
+                var text = textArea[0].value;
+                if(text.length < parseInt(textArea.attr('maxlength'))){
+                    textArea[0].value = currentQuery;
+                }
+                textArea[0].value = "";
+            }
+            else{
+                textArea[0].value = "";
+                if(!signUpflag)
+                    currentQuery = "*";
+                else{
+                    currentQuery = "|"
+                    signUpflag = false;
+                }
+            }
+            textArea.attr('maxlength','100');
+            var value = queries[currentQuery];
+            var template = templates[value[0]];
+            for( var i = 1 ; i < value.length ; i++){
+                if( typeof(value[i]) == "number"){
+                    template = template.replace("%d",value[i]);
+                }
+                else if( typeof(value[i]) == "string"){
+                    template = template.replace("%s",value[i]);
+                } 
+            }
+            var toAppend = template;
+            
+            if($('.resultScreen > div').length != 0){
+                $('.resultScreen > div').removeClass('animated slideInUp').addClass('animated slideOutUp').one(newAnimationEnd,function(){
+                    $('.resultScreen').html(toAppend);
+                });
+            }
+            else{
+                $('.resultScreen').html(toAppend);
+            }
+            currentQuery = "";
+        }
+        else if(event.type != 'click' && !signUpflag){
+            var text = textArea[0].value;
+            if(text != ""){
+                if(text.length == 1){
+                    var toFill = map[text[0].toLowerCase()];
+                    if(toFill != undefined){
+                        currentQuery = toFill;
+                        textArea.attr('maxlength',currentQuery.length);
+                        textArea[0].value = currentQuery[0];
+                    }
+                    else{
+                        currentQuery = "";
+                    }
+                }
+                else{
+                    if(currentQuery.length != 0){
+                        textArea[0].value = text.slice(0,-1) + currentQuery.split(text.slice(0,-1))[1][0];
+                    }
+                }
+            }
+        }
+        
+        if(event.type == 'click'){
+            var value = queries[map['s']];
+            var template = templates[value[0]];
+            for( var i = 1 ; i < value.length ; i++){
+                if( typeof(value[i]) == "number"){
+                    template = template.replace("%d",value[i]);
+                }
+                else if( typeof(value[i]) == "string"){
+                    template = template.replace("%s",value[i]);
+                } 
+            }
+            var toAppend = template;
+            
+            if($('.resultScreen > div').length != 0){
+                $('.resultScreen > div').removeClass('animated slideInUp').addClass('animated slideOutUp').one(newAnimationEnd,function(){
+                    $('.resultScreen').html(toAppend);
+                });
+            }
+            else{
+                $('.resultScreen').html(toAppend);
+            }
+            
+            signUpflag = true;
+            textArea[0].value = "";
+            currentQuery = "";
+        }
+    }
     
 </script>
 
