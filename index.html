@@ -600,17 +600,18 @@ posted on @channel about the grim dystopian future, to which he belonged, and wa
 to change. In the year 2036, SERN(CERN) takes over the earth and the world goes into complete
 anarchy. John believes SERN invented time travel in 2001 itself and used it to transcend
 and overthrow all the political institutions. Titor wanted to make Grid, as a tool to connect and learn
-about enemy locations but more importantly as a symbol. A symbol of resistance. Within days, he was ready
-with a basic prototype. He and a few more survivors planned to test it on one of their missions to steal SERN
-equipment.The plan was simple but there was one flaw left in Grid which was causing a delay in messages. And
-this flaw became a major problem as Grid did not notify about enemey movement patterns in time. And then they were
-spotted. The whole facility was blaring alarms and in a matter of seconds a quite and scientific lab was filled
-with mercs. The team managed to pull off a sneaky escape. They decided to resort to the last option, go back in time
-and stop all this from happening.
+about enemy locations but more importantly as a symbol. A symbol of resistance.
 <br>
-We learnt about this on @channel and thought we should help regardless of how crazy and unbelievable it sounds. So we made
-Grid, or rather fixed it and tweaked it. The delay bug was squashed, a few neat features were added along with a sweet UI.
-In case John fails to defeat the current SERN, he would still have a battle ready Grid. A symbol of resistance.
+<br>
+And now you know that the team is comprised of uber geeks and nerds. We are a Delhi Technological University based
+startup and yes, still in college, preparing for exams and doing assignments. This is our first venture although it wasn't
+supposed to be a venture at all. But, here we are, not leaving this idea as a mere project or a github repository. Not because
+everyone is doing startups and it has gone mainstream but because this idea deserves to be out there, because we believe it
+is the future and because we believe we can build it.
+<br>
+<br>
+No we don't have a clichéd Team page, rather we have an easter egg. All you have to do is ask.
+
                 </p>
             </div>
         </div>
@@ -1756,7 +1757,7 @@ In case John fails to defeat the current SERN, he would still have a battle read
         'But dogs are better':[3,'So you like dogs more'],
         'Extract information from the captive held in the trunk of the car':[4,'Calling',911],
         'Find me a coffeehouse which has the least crowd and also has at least 2 charging points along with wifi':[2,'Go straight 25m, then turn right. That starbucks meets the conditions.'],
-        'Give me a break':[2,'You can have all the break you want once you finish your assignment.'],
+        'grep founders origin.txt':[2,'https://goo.gl/XyMHHD'],
         'Hack into this terminal and give me all its content':[4,'Calling',911],
         'Identify all the points on this road which are prone to traffic jam':[5,'Analyzing....',3,'points identified'],
         'I need to get [here] but without jostling, find me the route':[3,'Routing...'],
@@ -1793,7 +1794,7 @@ In case John fails to defeat the current SERN, he would still have a battle read
         'd': 'But dogs are better',
         'e': 'Extract information from the captive held in the trunk of the car',
         'f': 'Find me a coffeehouse which has the least crowd and also has at least 2 charging points along with wifi',
-        'g': 'Give me a break',
+        'g': 'grep founders origin.txt',
         'h': 'Hack into this terminal and give me all its content',
         'i': 'Identify all the points on this road which are prone to traffic jam',
         'j': 'I need to get [here] but without jostling, find me the route',
@@ -1823,8 +1824,9 @@ In case John fails to defeat the current SERN, he would still have a battle read
 
         if(event.keyCode == 13){
             textArea.blur();
+            var text;
             if(currentQuery.length != 0){
-                var text = textArea[0].value;
+                text = textArea[0].value;
                 if(text.length < parseInt(textArea.attr('maxlength'))){
                     textArea[0].value = currentQuery;
                 }
@@ -1846,6 +1848,8 @@ In case John fails to defeat the current SERN, he would still have a battle read
             textArea.attr('maxlength','100');
             var value = queries[currentQuery];
             var template = templates[value[0]];
+            if(text != currentQuery)
+              value = [2,'Please complete the query']
             for( var i = 1 ; i < value.length ; i++){
                 if( typeof(value[i]) == "number"){
                     template = template.replace("%d",value[i]);
@@ -1855,7 +1859,6 @@ In case John fails to defeat the current SERN, he would still have a battle read
                 }
             }
             var toAppend = template;
-
             if($('.resultScreen > div').length != 0){
                 $('.resultScreen > div').removeClass('animated slideInUp').addClass('animated slideOutUp').one(newAnimationEnd,function(){
                     $('.resultScreen').html(toAppend);
