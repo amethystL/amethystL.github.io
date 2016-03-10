@@ -1752,6 +1752,29 @@ In case John fails to defeat the current SERN, he would still have a battle read
         '*': [2,'This query can\'t be made.'],
         '|': [2,'Thankyou for signing up'],
         'Sign Up for public beta': [2,'Type your email and press Enter.'],
+        'Cats are glorious':[3,'Noted, you like cats'],
+        'But dogs are better':[3,'So you like dogs more'],
+        'Extract information from the captive held in the trunk of the car':[4,'Calling',911],
+        'Find me a coffeehouse which has the least crowd and also has at least 2 charging points along with wifi':[2,'Go straight 25m, then turn right. That starbucks meets the conditions.'],
+        'Give me a break':[2,'You can have all the break you want once you finish your assignment.'],
+        'Hack into this terminal and give me all its content':[4,'Calling',911],
+        'Identify all the points on this road which are prone to traffic jam':[5,'Analyzing....',3,'points identified'],
+        'I need to get [here] but without jostling, find me the route':[3,'Routing...'],
+        'Kill time':[2, 'That is exactly what you are doing right now.'],
+        'Launch "Zeal"':[2,'Press right arrow key'],
+        'Monitor the metro train\'s speed and alert me when it reaches 30KMPH':[3,'Will do'],
+        'Notify me when the crowd outside [this] club gets below 50':[2,'It\'s already 46.'],
+        'And now I am on the outside':[2,'You like Ellie goulding?'],
+        'Point out the anomalies in this set of data which is about arrival times of [this] bus':[1,42,'anomalies detected','Most of them are around',8,'PM'],
+        'Quantum physics is weird. I thought it was easy but when I looked, it changed':[2,'I see what you did there.'],
+        'rm -rf /':[2,'Needs sudo access'],
+        'Transformers armada was a good cartoon':[3,'Hell yes'],
+        'Underwoods are murderers':[3,'No, they are survivors'],
+        'V for?':[2,'This visage, no mere veneer of vanity, is a vestige of the “vox populi” now vacant, vanished.'],
+        'What\'s the distribution of the population around [this] area?':[1,34,'people are near [this] stall', 'and',55, 'are outside [this] one.'],
+        '*yawns*':[2,'Hey I am NOT boring!'],
+        'Find me my Zen':[4,'The answer is always ',42],
+        'Broadcast around me: "I have an extra ticket. Any one interested in buying?"':[2,'One replied with "How much?"'],
         'All the ATMs around me':[1,23,'ATMs around you.','The nearest one is',34,'meters away.'],
     }
 
@@ -1759,14 +1782,38 @@ In case John fails to defeat the current SERN, he would still have a battle read
         1 : ' <div class="animated slideInUp" id="type1" style="position: relative"><p style="margin: 0;"><span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;">%d</span> %s</p><p style="margin: 0;">%s<span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;"> %d </span>%s</p></div>',
         2 : ' <div class="animated slideInUp" id="type2" style="position: relative;"><p style="font-size: 2em">%s</p></div>',
         3 : ' <div class="animated slideInUp" id="type2" style="position: relative;"><p style="font-size: 3em">%s</p></div>',
-        4 : ' <div class="animated slideInUp" id="type1" style="position: relative"><p style="margin: 0;"><span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;">%d</span> %s</p></div>'
+        4 : ' <div class="animated slideInUp" id="type1" style="position: relative"><p style="margin: 0;font-size: 2em">%s<span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;">%d</span></p></div>',
+        5 : ' <div class="animated slideInUp" id="type1" style="position: relative"><p style="margin: 0;">%s<span style="color: #41AB6B;font-family: LemonMilk;font-size: 4em;">%d</span>%s</p></div>'
     }
 
     var map = {
         'a': 'All the ATMs around me',
-        'b': '',
+        'b': 'Broadcast around me: "I have an extra ticket. Any one interested in buying?"',
+        'c': 'Cats are glorious',
+        'd': 'But dogs are better',
+        'e': 'Extract information from the captive held in the trunk of the car',
+        'f': 'Find me a coffeehouse which has the least crowd and also has at least 2 charging points along with wifi',
+        'g': 'Give me a break',
+        'h': 'Hack into this terminal and give me all its content',
+        'i': 'Identify all the points on this road which are prone to traffic jam',
+        'j': 'I need to get [here] but without jostling, find me the route',
+        'k': 'Kill time',
+        'l': 'Launch "Zeal"',
+        'm': 'Monitor the metro train\'s speed and alert me when it reaches 30KMPH',
+        'n': 'Notify me when the crowd outside [this] club gets below 50',
+        'o': 'And now I am on the outside',
+        'p': 'Point out the anomalies in this set of data which is about arrival times of [this] bus',
+        'q': 'Quantum physics is weird. I thought it was easy but when I looked, it changed',
+        'r': 'rm -rf /',
         's': 'Sign Up for public beta',
+        't': 'Transformers armada was a good cartoon',
+        'u': 'Underwoods are murderers',
+        'v': 'V for?',
+        'w': 'What\'s the distribution of the population around [this] area?',
+        'y': '*yawns*',
+        'z': 'Find me my Zen'
     }
+    map.x=map.e;
 
     var currentQuery = "";
     var signUpflag = false;
