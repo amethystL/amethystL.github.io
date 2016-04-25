@@ -151,12 +151,31 @@ In case John fails to defeat the current SERN, he would still have a battle read
     
     <div id="secondColumn" class="grid-100">
         <div id="navigator">
-        <svg id="navSvg" class="navSvg animated slideInUp" width="543" height="41" style="position: relative; display: block; margin: auto; z-index: 1000;">
-        </svg>
-        <div id="navLabelGroup" class="animated slideInUp">
-        <i class="fa fa-caret-up" style="position: relative; vertical-align: top; font-size: 13px; color: #95F22E; z-index: 1000;"></i>
-        <span id="navLabel">Home</span>
-        </div>
+            <div id="scrollIcon" class="ba animated flipOutX">
+                <img src="../images/img/scroll.png" />
+                <span>SCROLL</span>
+            </div>
+            <div id="scrollIcon" class="fr animated flipInX" style="left: 0px; text-transform: uppercase;">
+                <span style="top: 0px;" class="glitch" data-text="Copyright © Amethyst Labs.">Copyright © Amethyst Labs.</span>
+            </div>
+            
+            <div id="shareIcon">
+                <div id="shareIcons" class="animated flipOutX">
+                    <span id="facebookIcon" style="margin: 7px; display: inline-block;"><a href="https://www.facebook.com/amethystlabs/" style="#fff"><i class="fa fa-facebook fa-lg"></i></a></span>
+                    <span id="twitterIcon" style="margin: 7px; display: inline-block"><a href="https://twitter.com/amethyst_labs" style="#fff"><i class="fa fa-twitter fa-lg"></i></a></span>
+                    <span id="googleplusIcon" style="margin: 7px; display: inline-block"><a href="https://plus.google.com/+AmethystlabsOrg" style="#fff"><i class="fa fa-google-plus fa-lg"></i></a></span>
+                </div>
+                <span id="shrIcon" class="animated flipInX" style="display: inline-block;"><i class="fa fa-share-alt fa-lg"></i></span>
+            </div>
+            
+            <div id="svgContainer">
+                <svg id="navSvg" viewbox="0 0 382 40" class="navSvg animated slideInUp" style="position: relative; display: block; margin: auto; z-index: 1000;">
+                </svg>
+                <div id="navLabelGroup" class="animated slideInUp">
+                    <i class="fa fa-caret-up" style="position: relative; vertical-align: top; font-size: 13px; color: #95F22E; z-index: 1000;"></i>
+                    <span id="navLabel">Home</span>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -176,6 +195,7 @@ In case John fails to defeat the current SERN, he would still have a battle read
     link.href = "../images/favicon.png"
     link.type = "image/x-icon"
     document.getElementsByTagName('head')[0].appendChild(link)
+    
     //end
     
     new WOW().init();
@@ -196,7 +216,7 @@ In case John fails to defeat the current SERN, he would still have a battle read
         var y = 40;
         
         var lines = [];
-        var positions = [0,30.8,61.6,92.4];
+        var positions = [0,33.2,66.2,99.2];
         
         //drawing the bigger line
         h = -40

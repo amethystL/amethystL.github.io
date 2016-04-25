@@ -317,9 +317,10 @@ video#gridvid {
     font-size: 60px;
     letter-spacing: 2px;
     font-weight: 200;
+    width: 100%;
     top: 0%;
     z-index: 100;
-    left: 40%;
+    left: 0px;
 }
 
 #elpsycongroo > h1{
@@ -597,15 +598,26 @@ video#gridvid {
 
 #navigator{
     position: fixed;
-    left: 36%;
-    width: 30%;
+    left: 0%;
+    width: 100%;
     margin: 0 auto;
     padding: 0;
     z-index: 1000;
 }
 
+#svgContainer{
+    width: 28%;
+    height: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #navSvg{
     z-index: inherit;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 #navLabel{
@@ -1009,4 +1021,14 @@ div.text > h1{
     font-size: 1.1em;
     color: #000;
     text-align: center;
+}
+
+
+/* media queries */
+@media only screen and (max-width: 1024px){
+    /*for all except main*/
+}
+
+@media only screen and (max-width: 768px){
+    /*for all*/
 }

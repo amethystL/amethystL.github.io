@@ -3,13 +3,13 @@
 
 <p>For IE8 &amp; below, I would recommend using the polyfill ExplorerCanvas - available at <a href="https://code.google.com/p/explorercanvas/" target="_blank">https://code.google.com/p/explorercanvas/</a>. It falls back to Internet explorer’s format VML when canvas support is not available. Example use:</p>
 
-<p>```html</p>
-<head>
-	<!--[if lte IE 8]>
-		<script src="excanvas.js"></script>
-	<![endif]-->
-</head>
-<p>```</p>
+<div class="highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+	<span class="c">&lt;!--[if lte IE 8]&gt;
+		&lt;script src="excanvas.js"&gt;&lt;/script&gt;
+	&lt;![endif]--&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+</code></pre>
+</div>
 
 <p>Usually I would recommend feature detection to choose whether or not to load a polyfill, rather than IE conditional comments, however in this case, VML is a Microsoft proprietary format, so it will only work in IE.</p>
 
@@ -30,9 +30,9 @@
 
 <ul>
   <li>Tabs for indentation, not spaces please.</li>
-  <li>Please ensure you’re changing the individual files in <code>/src</code>, not the concatenated output in the <code>Chart.js</code> file in the root of the repo.</li>
-  <li>Please check that your code will pass <code>jshint</code> code standards, <code>gulp jshint</code> will run this for you.</li>
-  <li>Please keep pull requests concise, and document new functionality in the relevant <code>.md</code> file.</li>
+  <li>Please ensure you’re changing the individual files in <code class="highlighter-rouge">/src</code>, not the concatenated output in the <code class="highlighter-rouge">Chart.js</code> file in the root of the repo.</li>
+  <li>Please check that your code will pass <code class="highlighter-rouge">jshint</code> code standards, <code class="highlighter-rouge">gulp jshint</code> will run this for you.</li>
+  <li>Please keep pull requests concise, and document new functionality in the relevant <code class="highlighter-rouge">.md</code> file.</li>
   <li>Consider whether your changes are useful for all users, or if creating a Chart.js extension would be more appropriate.</li>
 </ul>
 
