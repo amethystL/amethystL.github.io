@@ -478,15 +478,17 @@ title: Amethyst Labs
                 <video autoplay loop muted id="bgvid">
                     <source src="../images/video.mp4" type="video/mp4">
                 </video>
-                <div class="overlay"></div>
-                <a href="#" onclick="closeLightbox()">
-                    <div class="icon-container" style="position: relative; float: right; z-index: 1000; padding: 15px;">
-                        <span class="ti-close" style="font-size: 2.3em; color: #fff;"></span>
+                <div class="overlay">
+                    <div class="pluginsBorder" style="">
                     </div>
-                </a>
+                    <a href="#" onclick="closeLightbox()" style="visibility: hidden; position: absolute; top: 0; right: 0;">
+                    <div class="icon-container" style="position: relative; float: right; z-index: 1000; padding: 15px;">
+                        <span class="ti-close"></span>
+                    </div>
+                    </a>
+                </div>
                 <div id="container_preview" class="grid-container" style="padding: 0;">
-                    <div id="prev_image" class="grid-100" style="padding: 0; height: 100%;">
-                        <div id="prev_img_child" style="position: relative; left: -9% ;width: 100%; height: 100%; overflow: hidden;"></div>
+                    <div id="prev_image" class="grid-100 animated" style="padding: 0; height: 100%; width: 50%; overflow: hidden;">
                     </div>
                     <div id="prev_text" class="grid-100" style="position: absolute; left: 50%; width: 50%; height: 100%;">
                         <div class="text">
@@ -513,12 +515,9 @@ title: Amethyst Labs
                 </h1>
             </div>
 
-            <div class="pluginsBorder" style="position: absolute; top: 30%; left: 50%; width: 48%; height: 40%; border-left: 1px solid white; border-right: 1px solid white; z-index:100; transform: translateX(-50%)">
-            </div>
-
 
                 <div class="content">
-                    <div class="grid animated" style="top: 35px; z-index: 100">
+                    <div class="grid animated" style="z-index: 100">
 					<figure class="effect-ming">
 						<img src="../images/img/logo9.png" style="" alt="img09"/>
 						<figcaption>
@@ -1522,7 +1521,7 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
 
 
     var elem = $('.overlay2');
-    var closeButton = elem.children().eq(2);
+    var closeButton = $('.overlay > a');
     var lightTextP = $('.text > p');
     var lightTexth = $('#pluginsPageHeading');
     var iter = 0;
@@ -1537,7 +1536,7 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
     var topd = preview.css('top');
     var width = preview.css('width');
     var height = preview.css('height');
-    var borderLeft,borderwidth,borderBorderR,borderTop;
+    var borderH,borderwidth,borderBorderR,borderTop;
     var borders = $('.pluginsBorder');
     var closeButtonDuration = 400;
     var gridDuration = 400;
@@ -1563,7 +1562,7 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
 
         grid.children().addClass('animated zoomOut');
 
-        var prev_image = $('#prev_img_child');
+        var prev_image = $('#prev_image');
         var prev_text = $('#prev_text');
 
         var preview = $('.overlay2');
@@ -1575,21 +1574,18 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
         */
 
         preview.animate({
-            left: "12%",
-            top: "20.5%",
-            width: "76%",
-            height: "58%"
+            width: "80%",
+            height: height
             },{
             duration: gridDuration,
             easing: "easeInQuart",
             queue: true,
             start: function(){
-                    borderLeft = borders.css('left');
+                    borderH = borders.css('height');
                     borderTop = borders.css('top');
                     borderBorderR = borders.css('border-right');
                     borders.animate({
-                        height: "toggle",
-                        top: "50%"
+                        height: "0px",
                     },{
                         duration: 500,
                         easing: "easeOutQuart",
@@ -1602,6 +1598,7 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
                     easing: "linear",
                 });
                 var image = active.children().eq(0).clone();
+                
                 image.addClass('animated slideInLeft');
                 image.css({
                     'animation-duration': '500ms',
@@ -1611,10 +1608,24 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
                     '-o-animation-duration': '500ms',
                 });
                 prev_image.append(image);
-                var breadth = image.width();
-                var small_breadth = parseInt($('#prev_img_child').css('width'))/2;
-                var value = (breadth - small_breadth)/2;
-                image.css({'-webkit-clip-path': 'inset(0px '+value+'px 0px '+value+'px'})
+                image.css({
+                    'position':'relative',
+                    'max-width':'none',
+                    'left':'-25%',
+                    'height':'100%'
+                });
+                /*
+                console.log("before staement")
+                prev_image.addClass('slideInLeft');
+                prev_image.css({
+                    'animation-duration': '500ms',
+                    '-webkit-animation-duration': '500ms',
+                    '-ms-animation-duration': '500ms',
+                    '-moz-animation-duration': '500ms',
+                    '-o-animation-duration': '500ms',
+                });
+                console.log("after statement")
+                */
                 $(lightTextP[iter]).css('visibility','visible');
                 $(lightTextP[iter]).removeClass('fadeOut');
                 $(lightTextP[iter]).css({'-webkit-animation-delay':'500ms','animation-delay':'500ms'});
@@ -1630,9 +1641,9 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
     var closeLightbox = function(){
 
         //reverting the changes
-
+        console.log("entered func")
         var preview = $('.overlay2');
-        var prev_image = $('#prev_img_child').children().eq(0);
+        var prev_image = $('#prev_image > img');
         var prev_text = $('#prev_text').children().eq(0);
 
         closeButton.toggle();
@@ -1651,24 +1662,18 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
         })
 
         iter = 0;
-
-        prev_image.addClass('animated slideOutLeft').one(animationEnd,function(){
+        console.log("before func")
+        prev_image.addClass('slideOutLeft').one(animationEnd,function(){
             preview.animate({
             left: left,
-            top: topd,
             width: width,
-            height: height,
             },{
             duration: 600,
             easing: "easeInQuart",
             queue: true,
-            start: function(){
-
-                },
             complete: function(){
                 borders.animate({
-            height: "toggle",
-            top: borderTop,
+            height: borderH,
         },{
             duration: borderDuration,
             easing: "easeOutQuart",
@@ -1682,13 +1687,32 @@ No we don't have a clichéd Team page, rather we have an easter egg. All you hav
                 var elem = $('#navLabelGroup')
                 foot.attr('class','animated slideInUp');
                 elem.attr('class','animated slideInUp');
-
+                prev_image.removeClass('slideOutLeft');
                 }
              }
             );
         });
 
     }
+    
+    var overlayTop = $('.overlay2').position()['top'];
+    $(window).on('resize load',function(){
+        var overlay2 = $('.overlay2');
+        var windowHeight = $(window).height();
+        var overlay2Height = overlay2.height();
+        var positionOverlay = ( windowHeight - overlay2Height )/2;
+        var topDiff = Math.abs(overlayTop - positionOverlay)
+        overlay2.css('top',positionOverlay+'px')
+        
+        $('.content > .grid').css('top',topDiff+'px')
+        console.log(topDiff)
+        /*
+        var cC = $($('.effect-ming')[0])
+        cCH = (parseFloat(cC.css('margin').split('px')[0])*2 + cC.height())*2
+        var marginB = (overlay2Height - cCH)/2 - overlay2Height
+        overlay2.css('margin-bottom',marginB+'px')
+        */
+    });
 
 
 

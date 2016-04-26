@@ -4,7 +4,7 @@
 	margin: 0 auto;
 	padding: 7.5em 0 4em;
     left: auto;
-	max-width: 600px;
+	width: 50%;
 	list-style: none;
 	text-align: center;
     height: inherit;
@@ -16,9 +16,6 @@
 	float: left;
 	overflow: hidden;
 	margin: 10px 1%;
-	min-width: 0px;
-	max-width: 300px;
-	max-height: 360px;
 	width: 48%;/*65%*/
 	height: 100%;/*100*/
 	background: #3085a3;
@@ -1060,7 +1057,7 @@ figure.effect-jazz:hover p {
 figure.effect-ming {
 	background: #030c17;
     z-index: 100;
-    margin: 6px 6px;
+    margin: 1% 1%;
 }
 
 figure.effect-ming img {

@@ -391,10 +391,10 @@ video#gridvid {
 
 
 #scrollIcon{
-    position: fixed;
+    position: absolute;
     width: 400px;
     left: 2%;
-    bottom: 8%;
+    bottom: 60%;
 }
 
 #scrollIcon > img{
@@ -416,9 +416,9 @@ video#gridvid {
 }
 
 #shareIcon{
-    position: fixed;
-    right: 2%;
-    bottom: 5%;
+    position: absolute;
+    right: 3%;
+    bottom: 20%;
     z-index: 100;
     cursor: pointer;
 }
@@ -598,6 +598,7 @@ video#gridvid {
 
 #navigator{
     position: fixed;
+    bottom: 2%;
     left: 0%;
     width: 100%;
     margin: 0 auto;
@@ -607,7 +608,6 @@ video#gridvid {
 
 #svgContainer{
     width: 28%;
-    height: 0;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -774,25 +774,34 @@ textarea:focus, input:focus{
     z-index: 20;
 }
 
+.pluginsBorder{
+    position: absolute; 
+    top: 15%; 
+    left: 50%; 
+    width: 90%; 
+    height: 70%; 
+    border-left: 1px solid white; 
+    border-right: 1px solid white; 
+    z-index:100; 
+    transform: translateX(-50%)
+}
+
 .overlay{
-    position: absolute;
+    position: relative;
     background-color: rgba(255,255,255,0.06);
     width:100%;
-    height: 100%;
     z-index: 1000;
+    padding-top: 55%;
 }
 
 .overlay2{
-    position: absolute;
-    left: 23%;/*20*/
-    top: 20.5%;
-    width: 54%;
-    height: 58%;
-    margin: 0 auto;
-    /*border: 1px solid white;*/
+    position: relative;
+    width: 60%;
+    margin: 1% auto -32%;
     overflow: hidden;
     padding: 0;
     z-index: 10;
+    top: 111px;
 }
 
 .overlay2 video{
@@ -810,7 +819,6 @@ textarea:focus, input:focus{
 
 .content {
 	margin: 0 auto;
-	max-width: 1000px;
     z-index: 100;
     height: inherit;
 }
@@ -837,6 +845,7 @@ textarea:focus, input:focus{
     width: 100%;
     height: 100%;
     padding: 0;
+    top: 0%;
 }
 
 #prev_image{
@@ -1023,10 +1032,59 @@ div.text > h1{
     text-align: center;
 }
 
+.ti-close{
+    font-size: 2.3em; 
+    color: #fff;
+}
 
 /* media queries */
 @media only screen and (max-width: 1024px){
-    /*for all except main*/
+    #scrollIcon > span{
+        letter-spacing: 2px;
+        font-size: 7px;
+    }
+    #shareIcon > span{
+        font-size: 7px;
+    }
+    #shareIcons > span{
+        font-size: 7px;
+    }
+    #shareIcon{
+        bottom: 30%;
+    }
+    #navLabel{
+        font-size: 7px;
+        top: 4px;
+        letter-spacing: 2px;
+    }
+    #elpsycongroo > h1{
+        font-size: 55px;
+    }
+    .effect-ming > figcaption > h2{
+        font-size: 0.9em;
+    }
+    div.text > p{
+        font-size: 0.96em;
+    }
+    .ti-close{
+        font-size: 1.7em;
+    }
+    /* setting the font-sizes of main headings*/
+    #elpsycongroo > p{
+        font-size: 0.9em;
+    }
+    #tg_part_2{
+        font-size: 20px;
+    }
+    #tg_part_1{
+        font-size: 55px;
+    }
+    #pluginsPageHeading{
+        font-size: 55px;
+    }
+    #logo_screen > h1{
+        font-size: 55px;
+    }
 }
 
 @media only screen and (max-width: 768px){
